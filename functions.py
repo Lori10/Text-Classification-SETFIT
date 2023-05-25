@@ -11,7 +11,7 @@ def get_data(df, seed=42, nr_example_per_class=16, get_full_data=False):
   """
 
   if get_full_data:
-    return df['train'].shuffle(seed=seed).select(range(1000)), df['test'].shuffle(seed=seed)
+    return df['train'].shuffle(seed=seed), df['test'].shuffle(seed=seed)
   else:
     df_1 = df['train'].shuffle(seed=seed).filter(lambda example: example['label'] == 1).select(range(nr_example_per_class))
     df_0 = df['train'].shuffle(seed=seed).filter(lambda example: example['label'] == 0).select(range(nr_example_per_class))
