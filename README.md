@@ -1,5 +1,5 @@
 # Few-shot text classification with SETFIT
-
+Check out the full research work (pdf file) for more details: https://github.com/Lori10/Text-Classification-SETFIT/blob/main/SETFIT.pdf
 ## Table of Content
   * [Problem Statement](#Problem-Statement)
   * [Libraries and Resources](#Libraries-and-Resources)
