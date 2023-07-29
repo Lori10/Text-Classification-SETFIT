@@ -77,3 +77,7 @@ hard negative/positive sampling. I demonstrate the effectivness of this approach
 * The idea is to choose sentences that are not similar at all but have the same label (make them more similar during fine tuning) and sentences that are very similar but have different labels (make them less similar during fine tuning).
 * Expected to work better than random sampling for less nr of iterations (n) and greater nr of training examples (K).
 
+## Results
+I find that SETFIT significantly outperforms the standard fine-tuning baseline for M = 18 by an average of 22.6 points(in the original paper by 19.3 points). However, as the number of training samples increases to M = 50, the gap decreases to 13.3 points (in the original paper by 5.6 points). Similarly, standard fine-tuning on entire dataset outperforms SETFIT on average by 5.7 points. For M=18, SETFIT with random sampling has similar performance compared to SETFIT with hard negative sampling. As the size of few-shot training data increases, hard negative/positive sampling outperforms random sampling on average by 1.1 points. SETFIT with fine tuning clearly outperforms SETFIT without fine tuning for M=18 as well as for M=50.
+
+![alt text](https://github.com/Lori10/Text-Classification-SETFIT/blob/main/results.PNG "Image")
