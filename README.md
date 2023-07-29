@@ -74,3 +74,9 @@ My contribution to the original paper of SETFIT is as follows:
 1. I propose a new technique for sampling the data in the data generation process which is used for fine-tuning the Sentence Transformer which I called
 hard negative/positive sampling. I demonstrate the effectivness of this approach and compare the performance with random sampling.
 2. I make the code and data used in my work publicly available.
+
+* Can we improve performance using any approach instead of random sampling?
+* We have the following training data: (s_1, s_2, …, s_K) sentences and (l_1, l_2, …, l_K) labels
+* For each sentence s_i and for each iteration 1-n, sample a “positive” s_j where l_i == l_j & cos_sim(s_i, s_j) is minimal and a “negative” s_k where l_i != l_k & cos_sim(s_i, s_k) is maximal to produce as a result two triples (s_i, s_j, 1) and (s_i, s_k, 0).
+* Remove s_j and s_k from the sampling list to avoid choosing the same samples in the next iterations. 
+* Concatenate all the positive and negative triplets across all class labels to build the data for ST fine-tuning.
