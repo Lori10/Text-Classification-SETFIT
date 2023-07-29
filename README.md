@@ -28,7 +28,7 @@ fine-tune the Sentence Transformer, and compare its performance to the Random Sa
 **References** : https://arxiv.org/pdf/2209.11055.pdf, https://github.com/huggingface/setfit
 
 ## Data
-I conduct experiments on 3 text classification datasets: SST2, SentEvalCR and Ade-corpus-v2. These datasets used are available on the Hugging Face Hub under the SETFIT organisation. I split the datasets into training and test datasets.
+I conduct experiments on 3 text classification datasets: SST2, SentEval-CR and Ade-corpus-v2. These datasets used are available on the Hugging Face Hub under the SETFIT organisation. I split the datasets into training and test datasets.
 
 ## Baselines
 I compare SETFIT’s performance against the following models or
