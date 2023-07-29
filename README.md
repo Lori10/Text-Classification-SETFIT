@@ -7,18 +7,12 @@
   * [SETFIT model](#SETFIT-model)
   * [Sentence Transformer and Classification Head](#Sentence-Transformer-and-Classification-Head)
   * [Data Generation for finetuning ST](#Data-Generation-for-finetuning-ST)
-  * [Baselines](#Baselines)
-  * [Experimental Setup](#Experimental-Setup)
   * [Advantages of SETFIT](#Advantages-of-SETFIT)
   * [Hard Negative Sampling](#Hard-Negative-Sampling)
-  * [Model Building](#Model-Building)
-  * [Model Tuning](#Model-Tuning)
-  * [Techniques to improve the model performance](#Techniques-to-improve-the-model-performance)
-  * [Important Notes](#Important-Notes)
-  * [Disadvantages of N gram language model and faced issues](#Disadvantages-of-N-gram-language-model-and-faced-issues)
-  * [Demo](#demo)
+  * [Baselines](#Baselines)
+  * [Experimental Setup](#Experimental-Setup)
+  * [Results](#Results)
   * [Bug and Feature Request](#Bug-and-Feature-Request)
-  * [Future scope of project](#future-scope)
 
 ## Problem Statement
 Recent advances in few-shot learning have led to impressive results in scenarios where only a small amount of labeled data is available. Techniques such as standard fine tuning and few-shot learning with large language models have demonstrated their effectiveness. However, these methods are challenging in practice because they rely on manually generated prompts and require large language models with billions of parameters to achieve high accuracy. SETFIT overcomes these limitations. SETFIT is a prompt-free and efficient framework specifically designed for few-shot fine-tuning of Sentence Transformers (ST). The core idea behind SETFIT is to first fine-tune a pre-trained ST on a small set of text pairs in a contrastive Siamese manner. This process leads to a refined model capable of generating comprehensive text embeddings. Subsequently, these embeddings are utilized to train a classification head. My experiments show that SETFIT achieves comparable results to standard fine-tuning on few-shot training data as well as on the entire dataset, while being trained an order of magnitude faster. I also propose my Hard Negative/Positive Sampling approach to generate the data used to
