@@ -66,13 +66,13 @@ I compare SETFIT’s performance against the following models or approaches:
 
 
 ## Experimental Setup
-Since the performance of SETFIT and standard finetuning may be sensitive to the choice of few-shot training data, like the original paper I use 5 different random training splits for each dataset and sample size. Similar to the original paper, I use 2 different sample sizes of training data: M=18 and M=50 whereas the original paper uses M=8 and M=64. I use accuracy to evaluate the performance of each method on test dataset since the data is balanced and report the mean like the original paper. I fine-tune SETFIT using cosine-similarity loss, a learning rate of 0.00002, a batch size of 16 and epoch of 1. I also use the same learning, batch size and number of epochs for standard
+Since the performance of SETFIT and standard fine-tuning may be sensitive to the choice of few-shot training data, like the original paper I use 5 different random training splits for each dataset and sample size. Similar to the original paper, I use 2 different sample sizes of training data: M=18 and M=50 whereas the original paper uses M=8 and M=64. I use accuracy to evaluate the performance of each method on test dataset since the data is balanced and report the mean like the original paper. I fine-tune SETFIT using cosine-similarity loss, a learning rate of 0.00002, a batch size of 16 and epoch of 1. I also use the same learning, batch size and number of epochs for standard
 fine tuning. I set the same values for the hyperparameters across all methods and do not perform any hyperparameter tuning.
 
 ## Hard Negative Sampling
 My contribution to the original paper of SETFIT is as follows:
-1. I propose a new technique for sampling the data in the data generation process which is used for fine-tuning the Sentence Transformer which I called
-hard negative/positive sampling. I demonstrate the effectivness of this approach and compare the performance with random sampling.
+1. I propose a new technique for sampling the data in the data generation process which is used for fine-tuning the Sentence Transformer which I called
+hard negative/positive sampling. I demonstrate the effectivness of this approach and compare the performance with random sampling.
 2. I make the code and data used in my work publicly available.
 
 * Can we improve performance using any approach instead of random sampling?
