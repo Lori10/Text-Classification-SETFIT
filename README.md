@@ -51,9 +51,9 @@ SETFIT uses a two-step training methodology, that begins with fine-tuning a Sent
 * SetFit changes the functionality of the ST from sentence embedding to topic embedding.
 
 ## Advantages of SETFIT
-1. State-of-the-art results: SETFIT achieves state-of-the-art results in fewshot setup which makes its performance comparable with other SOTA techniques like standard fine tuning, in-context learning, parameter-efficient fine tuning and pattern exploiting training.
+1. State-of-the-art results: SETFIT achieves state-of-the-art results in few-shot setup which makes its performance comparable with other SOTA techniques like standard fine tuning, in-context learning, parameter-efficient fine tuning and pattern exploiting training.
 2. Faster to train: SETFIT is orders of magnitude faster to train or perform inference compared to other SOTA techniques.
-3. No need of prompt engineering: Pattern exploiting training and prominent PEFT methods require, as part of their training, the input of manually generated prompts, yielding varying outcomes depending on the level of manual prompt-engineering. On the contrary, SETFIT does not require any prompt design.
+3. No need of prompt engineering: Pattern exploiting training and prominent PEFT methods require, as part of their training, the input of manually generated prompts, yielding varying outcomes depending on the level of manual prompt-engineering. On the contrary, SETFIT does not require any prompt design.
 4. Run zero-shot classification: Using SETFIT we can also run zero-shot classification (when there is no labeled data available) by producing synthetic data for example: ‘this sentence is negative’ has the label 0 and ‘this sentence is positive‘ has the label 1. This has been proven to result in a very good performance too.
 
 ## Baselines
