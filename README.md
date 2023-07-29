@@ -80,3 +80,6 @@ hard negative/positive sampling. I demonstrate the effectivness of this approach
 * For each sentence s_i and for each iteration 1-n, sample a “positive” s_j where l_i == l_j & cos_sim(s_i, s_j) is minimal and a “negative” s_k where l_i != l_k & cos_sim(s_i, s_k) is maximal to produce as a result two triples (s_i, s_j, 1) and (s_i, s_k, 0) whereas cos_sim is a function which represents the cosine similarity.
 * Remove s_j and s_k from the sampling list to avoid choosing the same samples in the next iterations. 
 * Concatenate all the positive and negative triplets across all class labels to build the data for ST fine-tuning.
+* The idea is to choose sentences that are not similar at all but have the same label (make them more similar during fine tuning) and sentences that are very similar but have different labels (make them less similar during fine tuning).
+* Expected to work better than random sampling for less nr of iterations (n) and greater nr of training examples (K).
+
