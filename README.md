@@ -5,7 +5,7 @@
   * [Libraries and Resources](#Libraries-and-Resources)
   * [Data](#Data)
   * [Baselines](#Baselines)
-  * [Experimental-Setup](#Experimental-Setup)
+  * [Experimental Setup](#Experimental-Setup)
   * [Sentence Transformers](#Sentence-Transformers)
   * [Data Generation for finetuning ST](#Data-Generation-for-finetuning-ST)
   * [Model Building](#Model-Building)
@@ -45,13 +45,5 @@ sampling.
 
 
 ## Experimental Setup
-Since the performance of SETFIT and standard finetuning may be sensitive to the choice of few-shot training data, like the original
-paper I use 5 different random training splits for each dataset and sample size.
-Similar to the original paper, I use 2 different sample sizes of training data: M=18
-and M=50 whereas the original paper uses M=8 and M=64. I use accuracy
-to evaluate the performance of each method on test dataset since the data is
-balanced and report the mean like the original paper. I fine-tune SETFIT using
-cosine-similarity loss, a learning rate of 0.00002, a batch size of 16 and epoch of
-1. I also use the same learning, batch size and number of epochs for standard
-fine tuning. I set the same values for the hyperparameters across all methods
-and do not perform any hyperparameter tuning.
+Since the performance of SETFIT and standard finetuning may be sensitive to the choice of few-shot training data, like the original paper I use 5 different random training splits for each dataset and sample size. Similar to the original paper, I use 2 different sample sizes of training data: M=18 and M=50 whereas the original paper uses M=8 and M=64. I use accuracy to evaluate the performance of each method on test dataset since the data is balanced and report the mean like the original paper. I fine-tune SETFIT using cosine-similarity loss, a learning rate of 0.00002, a batch size of 16 and epoch of 1. I also use the same learning, batch size and number of epochs for standard
+fine tuning. I set the same values for the hyperparameters across all methods and do not perform any hyperparameter tuning.
